@@ -1,0 +1,27 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "User Authentication using express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RatulSaqibKhan/user-authentication-multi-backend.git"
+  },
+  "keywords": [
+    "user-authentication",
+    "hactoberfest"
+  ],
+  "author": "Md. Nazmus Saqib Khan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RatulSaqibKhan/user-authentication-multi-backend/issues"
+  },
+  "homepage": "https://github.com/RatulSaqibKhan/user-authentication-multi-backend#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0"
+  }
+}
