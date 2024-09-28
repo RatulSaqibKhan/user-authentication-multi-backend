@@ -1,0 +1,27 @@
+networks:
+  common-net:
+    external: true
+
+volumes:
+  rsk_app_user_auth_nestjs_node_modules:
+    driver: local
+
+services:
+  nestjs:
+    build:
+      context: ${DOCKER_BUILD_CONTEXT_DIR}
+      dockerfile: ./docker/nestjs/Dockerfile
+      target: development
+    ports:
+      - ${NESTJS_APP_PORT}:3000
+    volumes:
+      - ${NESTJS_APP_ROOT_DIR}:/app
+      - rsk_app_user_auth_nestjs_node_modules:/app/node_modules
+    environment:
+      - NODE_ENV=development
+    networks:
+      common-net:
+        aliases:
+          - rsk_app_user_auth_nestjs_common
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
