@@ -28,7 +28,6 @@ apps/
 │   └── docker-compose.yml # Main Docker Compose file for running the project
 │
 ├── README.md              # Project documentation
-├── docker-compose.yml     # Docker Compose file to orchestrate services
 └── .gitignore             # Ignore files for version control
 ```
 ## Authentication Implementations

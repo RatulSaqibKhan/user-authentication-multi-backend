@@ -1,0 +1,12 @@
+networks:
+  default:
+    driver: ${NETWORKS_DRIVER}
+
+services:
+  nestjs:
+    build:
+      context: ${DOCKER_BUILD_CONTEXT_DIR}
+      dockerfile: ./docker/nestjs/Dockerfile
+      target: production
+    env_file:
+      - .envs/nestjs.env
